@@ -6,7 +6,7 @@
 ![](./docs/images/gui-show1.png)
 
 ## 增加配置文件
-* 在程序目录下新建 `settings.ini` 配置文件，参考 [`settings.example.ini`](./settings.ini)
+* 在程序目录下新建 `settings.ini` 配置文件，参考 [`settings.example.ini`](./settings.example.ini)
 
 ## ref
 * python 代码格式化 https://zhuanlan.zhihu.com/p/203307235
