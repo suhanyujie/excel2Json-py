@@ -3,9 +3,13 @@ from PyQt6.QtWidgets import (
     QApplication,
 )
 from panel import Panel
+from helper import ConfHelper
 
 
 def main():
+    # for test
+    # ConfHelper.read_conf()
+
     app = QApplication(sys.argv)
     panel = Panel()
     panel.show()
