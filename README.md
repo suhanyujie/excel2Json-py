@@ -1,6 +1,10 @@
 # excel2Json-py
 提供给运营或者游戏策划的工具，将配置文件 —— xlsx 文件转换为 json 文件，从而把 json 配置文件提供给开发使用
 
+## 程序截图
+
+![](./docs/images/gui-show1.png)
+
 ## ref
 * python 代码格式化 https://zhuanlan.zhihu.com/p/203307235
 * https://github.com/pyqt/examples
