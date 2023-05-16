@@ -11,3 +11,4 @@
     * https://maicss.gitbook.io/pyqt-chinese-tutoral/pyqt6
 * __pycache__文件夹是什么东西？ https://zhuanlan.zhihu.com/p/476772186
 * gui 打包 https://github.com/brentvollebregt/auto-py-to-exe
+* python3 cookbook https://python3-cookbook.readthedocs.io/zh_CN/latest/index.html#
