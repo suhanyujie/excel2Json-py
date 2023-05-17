@@ -9,6 +9,7 @@
 * 在程序目录下新建 `settings.ini` 配置文件，参考 [`settings.example.ini`](./settings.example.ini)
 
 ## ref
+* python gui https://github.com/mherrmann/fbs
 * python 代码格式化 https://zhuanlan.zhihu.com/p/203307235
 * https://github.com/pyqt/examples
     * https://maicss.gitbook.io/pyqt-chinese-tutoral/pyqt6
