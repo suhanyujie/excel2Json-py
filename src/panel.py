@@ -20,6 +20,7 @@ from convert import Convert
 class Panel(QWidget):
     inputDir = ""
     outputDir = "output"
+    oneHistory = ("", "")
 
     def __init__(self):
         super().__init__()
@@ -84,6 +85,9 @@ class Panel(QWidget):
             self.setTips(e)
         else:
             self.setTips("转换完成~")
+            self.oneHistory[0] = self.inputDir
+            self.oneHistory[1] = self.outputDir
+            # 写入文件
 
     def on_button_clicked(self):
         alert = QMessageBox()
@@ -93,3 +97,6 @@ class Panel(QWidget):
     def setTips(self, text: str):
         content = "<h3>{text}</h3>".format(text=text)
         self.tips.setText(content)
+
+    def writeIntoFile(self):
+        return

@@ -32,3 +32,6 @@ class ConfHelper(object):
         conf = ConfigParser()
         conf.read("./settings.ini")
         print(conf["default"]["inputDir"])
+
+    # def write_into_file():
+    # if FileHelper.check_file_exist():
