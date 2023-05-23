@@ -8,7 +8,7 @@ from helper import ConfHelper, FileHelper
 
 def main():
     # for test
-    # FileHelper.check_file_exist()
+    # ConfHelper.get_history()
 
     app = QApplication(sys.argv)
     panel = Panel()

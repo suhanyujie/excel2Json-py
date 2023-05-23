@@ -15,6 +15,7 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtGui import QIcon, QAction
 from pathlib import Path
 from convert import Convert
+from helper import ConfHelper
 
 
 class Panel(QWidget):
@@ -88,6 +89,7 @@ class Panel(QWidget):
             self.oneHistory[0] = self.inputDir
             self.oneHistory[1] = self.outputDir
             # 写入文件
+            ConfHelper.write_into_file(self.oneHistory[0], self.oneHistory[1])
 
     def on_button_clicked(self):
         alert = QMessageBox()
