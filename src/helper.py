@@ -14,14 +14,17 @@ class ConfHelper(object):
         if not FileHelper.check_file_exist():
             FileHelper.create_config()
         his = ConfHelper.get_history()
+        print(his["input"])
         return [(his["input"], his["output"])]
 
-    def get_history():
+    def get_history() -> dict:
         conf = ConfigParser()
         try:
             conf.read(ConfHelper.conf_file)
-            his = conf.get("history", "latest")
+            his_str = conf.get("history", "latest")
+            his = json.loads(his_str)
         except Exception as e:
+            print(e)
             default = {
                 "input": ".",
                 "output": "./output",
@@ -47,7 +50,7 @@ class FileHelper:
     def create_config():
         # 创建 settings.ini
         conf_file = ConfHelper.conf_file
-        os.open(path=conf_file, flags="w", mode=755)
+        os.open(path=conf_file, flags=os.O_WRONLY, mode=755)
         return
 
     def check_file_exist() -> bool:

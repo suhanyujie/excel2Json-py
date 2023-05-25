@@ -51,6 +51,13 @@ class Panel(QWidget):
         self.tips.move(10, 120)
         self.setTips("欢迎使用~")
 
+        # read history, and set into input show
+        his_list = ConfHelper.get_records()
+        if len(his_list) >= 1:
+            (tmpIn, tmpOut) = his_list[0]
+            self.nameLineEdit.setText(tmpIn)
+            self.nameLineEdit1.setText(tmpOut)
+
         self.btn2 = QPushButton("开始转换", self)
         self.btn2.setMinimumWidth(120)
         self.btn2.setMinimumHeight(80)
@@ -75,8 +82,6 @@ class Panel(QWidget):
 
     def startConvert(self):
         try:
-            print(self.inputDir)
-            print(self.outputDir)
             if self.inputDir == "":
                 raise ValueError("请选择要转换的 xlsx 文件目录")
             if self.outputDir == "":
@@ -86,8 +91,7 @@ class Panel(QWidget):
             self.setTips(e)
         else:
             self.setTips("转换完成~")
-            self.oneHistory[0] = self.inputDir
-            self.oneHistory[1] = self.outputDir
+            self.oneHistory = (self.inputDir, self.outputDir)
             # 写入文件
             ConfHelper.write_into_file(self.oneHistory[0], self.oneHistory[1])
 
